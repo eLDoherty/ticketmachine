@@ -1,0 +1,114 @@
+@import "../base/colors.scss";
+
+.tm-header {
+    position: relative;
+    background: $background-color;
+    border-bottom: 4px solid $primary-color;
+    padding: 1.3rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tm-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tm-wrapper__logo {
+    color: $primary-color;
+}
+
+.tm-wrapper__menu {
+    display: flex;
+    align-items: center;
+}
+
+.tm-wrapper__menu--list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.tm-list {
+    a {
+        text-decoration: none;
+        color: $text-color;
+        font-weight: 600;
+        position: relative;
+        transition: color 0.3s, transform 0.3s;
+
+        &:hover {
+            color: $hover-color;
+            transform: translateY(-3px);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: $hover-color;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: bottom right;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: $text-color;
+    margin-left: 1.8rem;
+
+    .profile-image {
+        border-radius: 50%;
+        border: 2px solid $secondary-color;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    &:hover .profile-image {
+      border-color: $primary-color;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    p.profile-name {
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+        transition: color 0.3s, transform 0.3s;;
+    }
+
+    &:hover p {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        color: $primary-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .tm-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tm-wrapper__menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profile {
+        margin-top: 15px;
+    }
+}

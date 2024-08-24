@@ -1,0 +1,35 @@
+$background-color: #1a1a1a; // Almost Black
+$sparkle-color: rgba(255, 255, 255, 0.7); // White Sparkles
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+}
+
+.sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.sparkle {
+    position: absolute;
+    background: radial-gradient(circle, $sparkle-color 30%, transparent 40%);
+    border-radius: 50%;
+    opacity: 0;
+}
