@@ -1,4 +1,5 @@
 import HeroSlider from "./component/HeroSlider";
+import Intro from "./component/Intro";
 
 export default function Home()
 {
@@ -6,6 +7,7 @@ export default function Home()
     <main className="tm-homepage">
       <div className="tm-container">
         <HeroSlider />
+        <Intro heading="Our Main Event" />
       </div>
     </main>
   )
