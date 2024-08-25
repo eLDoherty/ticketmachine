@@ -1,0 +1,22 @@
+@keyframes rocket-move {
+    0% {
+      transform: translate(-50%, 100%) rotate(0deg);
+    }
+    50% {
+      transform: translate(calc(100vw - 50px), -100%) rotate(180deg);
+    }
+    100% {
+      transform: translate(-50%, 100%) rotate(360deg);
+    }
+  }
+  
+  .rocket {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    animation: rocket-move 15s linear infinite;
+    width: 50px;
+    height: auto;
+  }
+  

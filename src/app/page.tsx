@@ -1,8 +1,12 @@
-
+import HeroSlider from "./component/HeroSlider";
 
 export default function Home()
 {
   return (
-    <h1>Home Page</h1>
+    <main className="tm-homepage">
+      <div className="tm-container">
+        <HeroSlider />
+      </div>
+    </main>
   )
 }

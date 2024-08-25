@@ -1,0 +1,73 @@
+@import "../base/colors.scss";
+
+.tm-slider {
+    padding: 3rem 0;
+    overflow: hidden;
+
+    .swiper {
+        border: 4px solid $secondary-color;
+    }
+}
+
+.tm-slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.tm-slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 25px rgba($primary-color, 0.6);
+    background: rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .tm-slider-content__image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: $primary-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: lighten($primary-color, 20%);
+    }
+}
+
+.swiper-pagination-bullet {
+    background: $secondary-color;
+    transition: background 0.3s ease;
+
+    &.swiper-pagination-bullet-active {
+        background: darken($secondary-color, 10%);
+    }
+}
+
+.swiper-scrollbar {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+
+    .swiper-scrollbar-drag {
+        background: $primary-color;
+        border-radius: 10px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: lighten($primary-color, 10%);
+        }
+    }
+}

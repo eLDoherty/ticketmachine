@@ -1,5 +1,6 @@
 import Link from "next/link"
 import defaultProfile from "../../public/images/defaultProfile.jpg";
+import title from "../../public/images/ticket-machines.jpg";
 import Image from "next/image";
 import "./styles/layout/navbar.scss";
 
@@ -10,7 +11,15 @@ export default function Navbar()
             <div className="tm-container">
                 <div className="tm-wrapper">
                     <div className="tm-wrapper__logo">
-                        <h1>Ticket Machine</h1>
+                        <Link href="/">
+                            <Image 
+                                src={title} 
+                                alt="Ticket Machine" 
+                                width={250} 
+                                height={60}
+                                className="site-title" 
+                            />
+                        </Link>
                     </div>
                     <nav className="tm-wrapper__menu">
                         <ul className="tm-wrapper__menu--list">
