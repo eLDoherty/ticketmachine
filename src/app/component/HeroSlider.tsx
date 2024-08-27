@@ -12,11 +12,19 @@ import SliderImage from './../../../public/images/slide1.jpg';
 import SliderImage1 from './../../../public/images/slide2.jpg';
 import SliderImage2 from './../../../public/images/slide3.jpg';
 import Image from 'next/image';
+import Alien from '../../../public/gif/alien.gif';
 import "../styles/components/heroSlider.scss";
 
 const HeroSlider: React.FC = () => {
   return (
     <div className='tm-slider'>
+        <div className="tm-alien">
+            <Image 
+                src={Alien} 
+                alt="Helo Alien" 
+                className="tm-alien__gif" 
+            />
+        </div>
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={0}
